@@ -66,3 +66,48 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 2. **Install dependency**  
    ```bash
    npm install
+3. **Set Up Environment Variables**
+   Create a .env file in the root directory and add the following:
+   ```env
+   DB_URI=<your-database-uri>
+   PORT=3000
+4. **Run the Server**
+   ```bash
+   npm start
+5. **Access the Application**
+   Open your browser and navigate to:
+   ```arduino
+   http://localhost:3000
+
+##💡 Usage
+- Login: Use owner or tenant credentials to access personalized dashboards.
+- Manage Properties: Add, edit, or view property details.
+- Track Payments: Monitor payment statuses and send reminders.
+- Handle Issues: Log and resolve tenant-reported issues efficiently.
+
+##🎯 Future Enhancements
+A-I-Powered Analytics: Gain insights into property trends and recommendations.
+-Multi-Language Support: Expand global accessibility.
+-Mobile App Integration: Manage properties conveniently on mobile devices.
+
+##🙌 Contributing
+- We welcome contributions to enhance the platform!
+
+1. **Fork the Repository**
+2. **Create a New Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+3. **Commit Your Changes**
+   ```bash
+   git commit -m "Add your feature"
+4. **Push to the Branch**
+   ```bash
+   git push origin feature/your-feature-name
+5. **Open a Pull Request**
+
+##📞 Support
+- For any issues or inquiries, contact us at:
+- Email: support@rentalplatform.com
+
+##🌟 Acknowledgments
+-Special thanks to our amazing team and contributors for making this platform possible! 🙏
