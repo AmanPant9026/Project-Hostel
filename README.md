@@ -107,7 +107,7 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 
 ---
 
-##🙌 Contributing
+## 🙌 Contributing
 
 **We welcome contributions to enhance the platform!**
 
@@ -129,13 +129,13 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 
 ---
 
-##📞 Support
+## 📞 Support
 
 - For any issues or inquiries, contact us at:
 - Email: support@rentalplatform.com
 
 ---
 
-##🌟 Acknowledgments
+## 🌟 Acknowledgments
 
--Special thanks to our amazing team and contributors for making this platform possible! 🙏
+- Special thanks to our amazing team and contributors for making this platform possible! 🙏
