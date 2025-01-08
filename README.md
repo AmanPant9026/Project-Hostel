@@ -132,7 +132,7 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 ## 📞 Support
 
 - For any issues or inquiries, contact us at:
-- Email: support@rentalplatform.com
+- Email: pantaman98@gmail.com
 
 ---
 
