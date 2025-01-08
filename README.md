@@ -44,7 +44,7 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 
 - **Frontend**: React, Tailwind CSS  
 - **Backend**: Node.js, Express  
-- **Database**: MongoDB  
+- **Database**: Firebase  
 - **Hosting**: AWS / Heroku  
 
 ---
@@ -54,7 +54,7 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 ### Prerequisites  
 
 - Node.js installed  
-- MongoDB instance (local or cloud)  
+- Firebase Instance (local or cloud)  
 - Git installed  
 
 ### Steps  
