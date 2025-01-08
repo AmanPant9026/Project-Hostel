@@ -1,0 +1,1 @@
+This platform simplifies rental property management for hostels, shops, and apartments. Features include tenant onboarding, payment automation, issue tracking, and maintenance scheduling. With real-time tracking, transparency, and an intuitive interface, it ensures efficient, stress-free management for owners and tenants.
