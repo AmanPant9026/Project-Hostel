@@ -85,7 +85,7 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 
 ---
 
-##💡 Usage
+## 💡 Usage
 
 - Login: Use owner or tenant credentials to access personalized dashboards.
   
@@ -97,7 +97,7 @@ Streamline operations and improve transparency with an efficient, user-friendly 
 
 ---
 
-##🎯 Future Enhancements
+## 🎯 Future Enhancements
 
 - A-I-Powered Analytics: Gain insights into property trends and recommendations.
   
