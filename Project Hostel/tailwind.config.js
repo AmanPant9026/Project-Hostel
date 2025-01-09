@@ -26,6 +26,9 @@ module.exports = withMT({
       'lg': '960px',
       'xl':'1440px',
     },
+    backgroundImage: {
+      login:"url('./src/assets/wallpaper.png')"
+    }
   
     
   },

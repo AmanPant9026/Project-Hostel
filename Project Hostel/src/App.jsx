@@ -7,10 +7,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import OwnerDashboard from "./pages/OwnerDashboard";
 import UserDashboard from "./pages/UserDashboard";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     //full containers
     //and route mangement
@@ -20,6 +20,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/owner" element={<OwnerDashboard />} />
           <Route path="/user" element={<UserDashboard />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </div>
