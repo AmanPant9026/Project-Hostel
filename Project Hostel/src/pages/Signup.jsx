@@ -1,11 +1,11 @@
 import React from "react";
 
-const Signup = () => {
+const SignupPage = () => {
   return (
-    <div>
-      <div>Signup</div>
+    <div className="h-screen flex items-center justify-center">
+      <h1 className="text-3xl font-bold">Signup Page</h1>
     </div>
   );
 };
 
-export default Signup;
+export default SignupPage;
