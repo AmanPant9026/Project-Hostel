@@ -13,28 +13,6 @@ const Navbar = () => {
         Hostel Stay
       </Link>
 
-      {/* Navigation Links */}
-      {/* <div className="flex gap-4">
-        <Link
-          to="/features"
-          className="text-lg text-gray-600 hover:text-blue-600 font-poppins"
-        >
-          Features
-        </Link>
-        <Link
-          to="/about"
-          className="text-lg text-gray-600 hover:text-blue-600 font-poppins"
-        >
-          About
-        </Link>
-        <Link
-          to="/contact"
-          className="text-lg text-gray-600 hover:text-blue-600 font-poppins"
-        >
-          Contact
-        </Link>
-      </div> */}
-
       {/* Login / Signup */}
       <div className="flex gap-2">
         <Link to="/login">
