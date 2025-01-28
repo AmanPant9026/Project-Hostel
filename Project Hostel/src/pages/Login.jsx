@@ -16,7 +16,7 @@ const Login = () => {
   return (
     <AuthLayout>
       <div className="flex items-center justify-center w-screen h-[90vh]">
-        <div className="w-full md:w-2/3 lg:w-1/2">
+        <div className="w-4/5 md:w-2/5">
           <Card className="flex flex-col shadow-lg md:flex-row bg-gray-50 h-1/2">
             <CardHeader
               floated={false}
