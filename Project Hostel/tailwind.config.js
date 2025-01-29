@@ -12,7 +12,8 @@ module.exports = withMT({
       fontFamily: {
         'logo': ["Abel", "sans-serif"],
         'source': ["Source Sans 3", "sans-serif"],
-        'poppins':["Poppins", "sans-serif"]
+        'poppins': ["Poppins", "sans-serif"],
+        'playwrite':["Playwrite IN","serif"]
       }
     },
     colors: {
