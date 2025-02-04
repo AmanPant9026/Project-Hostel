@@ -1,82 +1,90 @@
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Input,
-  Checkbox,
-  Button
-} from "@material-tailwind/react";
-import Footer from "../components/Footer";
-import Layout from "../Layouts/Layout";
+import React, { useState } from "react";
+import { auth } from "../services/firebase";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import AuthLayout from "../Layouts/AuthLayout";
+import { Typography } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
+import googleLogo from "../assets/google.png"; // Import the Google logo
+
 const Login = () => {
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  // Handle Google login
+  const handleGoogleLogin = async () => {
+    setIsLoading(true);
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      setMessage("Login successful with Google!");
+      console.log("User logged in with Google: ", result.user);
+      navigate("/owner-dashboard"); // Redirect to the Owner Dashboard after successful login
+    } catch (error) {
+      setMessage("Failed to login with Google: " + error.message);
+      console.log("Error: ", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <AuthLayout>
-      <div className="flex items-center justify-center w-screen h-[90vh]">
-        <div className="w-4/5 md:w-1/2">
-          <Card className="flex flex-col shadow-lg md:flex-row bg-gray-50 h-1/2">
-            <CardHeader
-              floated={false}
-              variant="gradient"
-              color="gray"
-              className="flex items-center justify-center mb-4 bg-opacity-50 bg-center bg-no-repeat bg-cover md:w-1/2 place-items-center bg-login s-md:h-[10vh] "
+      <div className="relative flex items-center justify-center h-screen overflow-hidden bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700">
+        {/* Login Form with floating effect */}
+        <div className="relative w-full p-12 transition-all duration-300 ease-in-out transform bg-white shadow-2xl bg-opacity-80 rounded-3xl md:w-96 hover:scale-105">
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <Typography
+              variant="h2"
+              color="blue-gray"
+              className="font-poppins text-3xl font-extrabold text-[#3164f4]"
             >
-              <div className="flex items-center justify-center w-full h-full bg-white bg-opacity-35">
-                <Typography className="text-2xl font-semibold text-black font-poppins">
-                  Hostel stay
-                </Typography>
-              </div>
-            </CardHeader>
+              Hostel Stay
+            </Typography>
+          </div>
 
-            <div className="md:w-1/2">
-              <CardBody className="flex flex-col gap-4 -ml-5">
-                <div className="flex items-center justify-center">
-                  <Typography
-                    variant="h3"
-                    color="black"
-                    className="font-poppins"
-                  >
-                    Login
-                  </Typography>
-                </div>
-                <div className="flex flex-col gap-y-2">
-                  {/* <Input label="Email" /> */}
-                  <input
-                    label="Email"
-                    placeholder="E-mail"
-                    type="email"
-                    className="px-2 py-2 text-sm rounded-md outline-blue-gray-300 outline outline-1 focus:outline-2 focus:outline-blue-gray-600 placeholder:text-blue-gray-400"
-                  />
-                  <input
-                    label="password"
-                    placeholder="Your Password"
-                    type="password"
-                    className="px-2 py-2 text-sm rounded-md outline-blue-gray-300 outline outline-1 focus:outline-2 focus:outline-blue-gray-600 placeholder:text-blue-gray-400"
-                  />
-                </div>
-              </CardBody>
-              <CardFooter className="pt-0 -ml-5">
-                <Button fullWidth>Sign In</Button>
-                <div className="flex ">
-                  <Typography className="flex justify-center mt-6 text-xs">
-                    Don&apos;t have an account?
-                    <Typography
-                      as="a"
-                      href="#signup"
-                      variant="small"
-                      color="blue-gray"
-                      className="ml-1 text-xs font-bold"
-                    >
-                      Sign up
-                    </Typography>
-                  </Typography>
-                </div>
-              </CardFooter>
-            </div>
-          </Card>
+          <div className="mb-6 text-center">
+            <Typography
+              variant="h3"
+              color="blue-gray"
+              className="text-2xl font-semibold text-gray-800 font-poppins"
+            >
+              Welcome Back
+            </Typography>
+            <p className="mt-2 text-sm text-gray-600">
+              Please sign in to continue
+            </p>
+          </div>
+
+          {/* Error Message */}
+          {message && (
+            <p className="mb-4 text-sm text-center text-red-500">{message}</p>
+          )}
+
+          {/* Google Login Image */}
+          <div className="flex justify-center mb-6">
+            <img
+              src={googleLogo}
+              alt="Google Login"
+              className="w-20 h-20 transition-all transform cursor-pointer hover:scale-110 hover:opacity-90"
+              onClick={handleGoogleLogin}
+            />
+          </div>
+
+          {/* Contact Us Section */}
+          <div className="mt-6 text-center">
+            <Typography className="text-xs text-gray-600">
+              Need assistance?{" "}
+              <a
+                href="/contact"
+                className="font-semibold text-blue-500 underline"
+              >
+                Contact Us
+              </a>
+            </Typography>
+          </div>
         </div>
       </div>
     </AuthLayout>
