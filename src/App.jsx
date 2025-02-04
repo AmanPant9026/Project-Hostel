@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/Login";
-import SignupPage from "./pages/Signup";
-import LoginPhone from "./pages/LoginPhone";
+import Login from "./pages/Login"; // Unified login component
+import OwnerDashboard from "./pages/OwnerDashboard"; // Owner Dashboard Page
 import MultiStepForm from "./components/MultistepForm";
 
 function App() {
@@ -11,8 +10,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<Login />} /> {/* Login page */}
+        <Route path="/owner-dashboard" element={<OwnerDashboard />} />{" "}
+        {/* Owner Dashboard */}
+        <Route path="/multi-step-form" element={<MultiStepForm />} />{" "}
+        {/* Example route */}
       </Routes>
     </Router>
   );
