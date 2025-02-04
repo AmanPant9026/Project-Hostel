@@ -1,24 +1,27 @@
 import React from "react";
+import styled from "styled-components";
 
 const Footer = () => {
   return (
-    <footer className="py-6 text-center text-white bg-gray-800">
-      <p className="text-sm font-poppins">
-        &copy; {new Date().getFullYear()} Hostel Stay. All Rights Reserved.
-      </p>
-      <div className="flex justify-center gap-4 mt-2">
-        <a href="#" className="text-blue-400 hover:text-blue-300">
-          Privacy Policy
-        </a>
-        <a href="#" className="text-blue-400 hover:text-blue-300">
-          Terms of Service
-        </a>
-        <a href="#" className="text-blue-400 hover:text-blue-300">
-          Contact
-        </a>
-      </div>
-    </footer>
+    <FooterWrapper>
+      <FooterContainer>
+        <p>© 2024 Hostel Manager. All Rights Reserved.</p>
+      </FooterContainer>
+    </FooterWrapper>
   );
 };
+
+const FooterWrapper = styled.footer`
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+`;
+
+const FooterContainer = styled.div`
+  max-width: 1200px;
+  margin: auto;
+  font-size: 1rem;
+`;
 
 export default Footer;
